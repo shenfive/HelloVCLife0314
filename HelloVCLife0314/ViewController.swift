@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var timer:Timer!
+    var counter = 1
+    
+    override func loadView() {
+        super.loadView()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setCounter(sender:)), userInfo: nil, repeats: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -20,5 +28,10 @@ class ViewController: UIViewController {
         print("View Will Disappear")
     }
 
+    @objc func setCounter(sender: Any?){
+        print(counter)
+        counter += 1
+    }
+    
 }
 
