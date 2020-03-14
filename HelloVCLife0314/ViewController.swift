@@ -21,8 +21,10 @@ class ViewController: UIViewController {
         newView.transform = CGAffineTransform(rotationAngle: 0)
         newView.backgroundColor = UIColor.red
         newView.center = self.view.center
+        newView.layer.cornerRadius = 15
+        newView.clipsToBounds = true
         self.view.addSubview(newView)
-        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { (theTimer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (theTimer) in
             self.rotateView(theView: newView)
         })
 
