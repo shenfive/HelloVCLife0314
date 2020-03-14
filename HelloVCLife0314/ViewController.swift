@@ -60,5 +60,11 @@ class ViewController: UIViewController {
     @IBAction func seledSegment(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
     }
+    @IBAction func enter(_ sender: UITextField) {
+        print(sender.text)
+    }
+    @IBAction func enterValueChanged(_ sender: UITextField) {
+        print(sender.text)
+    }
 }
 

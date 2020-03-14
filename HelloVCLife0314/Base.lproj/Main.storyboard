@@ -40,6 +40,16 @@
                                     <action selector="speedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="brl-sl-bXC"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-Xy-ncq">
+                                <rect key="frame" x="120" y="250" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enter:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="sw2-l6-3yg"/>
+                                    <action selector="enterValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wUd-32-db1"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
