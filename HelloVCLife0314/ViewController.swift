@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var timer:Timer!
     var counter = 0.0
     
+    @IBOutlet weak var theSegment: UISegmentedControl!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
         newView.layer.cornerRadius = 15
         newView.clipsToBounds = true
         self.view.addSubview(newView)
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (theTimer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (theTimer) in
             self.rotateView(theView: newView)
         })
 
@@ -35,7 +36,14 @@ class ViewController: UIViewController {
     func rotateView(theView:UIView){
         let angle = CGFloat(counter * M_PI / 180)
         theView.transform = CGAffineTransform(rotationAngle: angle)
-        counter += 4
+        
+        if theSegment.selectedSegmentIndex == 0{
+            counter += 4
+        }else{
+            counter -= 4
+        }
+        
+        
         print(counter)
     }
 
