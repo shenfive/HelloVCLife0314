@@ -50,8 +50,11 @@ class ViewController: UIViewController {
         
         
         
-        print(counter)
+//        print(counter)
     }
 
+    @IBAction func seledSegment(_ sender: UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
+    }
 }
 
