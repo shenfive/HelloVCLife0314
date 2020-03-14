@@ -37,11 +37,17 @@ class ViewController: UIViewController {
         let angle = CGFloat(counter * M_PI / 180)
         theView.transform = CGAffineTransform(rotationAngle: angle)
         
-        if theSegment.selectedSegmentIndex == 0{
+        switch theSegment.selectedSegmentIndex {
+        case 0:
             counter += 4
-        }else{
+        case 1:
+            break
+        case 2:
             counter -= 4
+        default:
+            break
         }
+        
         
         
         print(counter)

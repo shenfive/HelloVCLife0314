@@ -16,13 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MEb-2k-ytE">
-                                <rect key="frame" x="122" y="90" width="131" height="31"/>
+                                <rect key="frame" x="87.5" y="90" width="200" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="tz4-qi-ip5"/>
+                                    <constraint firstAttribute="width" constant="200" id="tz4-qi-ip5"/>
                                     <constraint firstAttribute="height" constant="30" id="wjG-2N-LLC"/>
                                 </constraints>
                                 <segments>
                                     <segment title="正轉"/>
+                                    <segment title="停止"/>
                                     <segment title="反轉"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,7 +31,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="MEb-2k-ytE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KuG-vV-c5J"/>
+                            <constraint firstItem="MEb-2k-ytE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cmK-se-Sgh"/>
                             <constraint firstItem="MEb-2k-ytE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="tzF-LI-tDi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
