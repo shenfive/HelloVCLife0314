@@ -16,9 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MEb-2k-ytE">
-                                <rect key="frame" x="87.5" y="90" width="200" height="31"/>
+                                <rect key="frame" x="62.5" y="90" width="250" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="tz4-qi-ip5"/>
+                                    <constraint firstAttribute="width" constant="250" id="tz4-qi-ip5"/>
                                     <constraint firstAttribute="height" constant="30" id="wjG-2N-LLC"/>
                                 </constraints>
                                 <segments>
@@ -31,9 +31,21 @@
                                     <action selector="seledSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="pig-0r-Asc"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="1" maxValue="13" translatesAutoresizingMaskIntoConstraints="NO" id="XJ5-Lj-GLX">
+                                <rect key="frame" x="60" y="153" width="255" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Pj5-h9-gi1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="speedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="brl-sl-bXC"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="XJ5-Lj-GLX" firstAttribute="width" secondItem="MEb-2k-ytE" secondAttribute="width" multiplier="1.005" id="8w1-Yc-zMV"/>
+                            <constraint firstItem="XJ5-Lj-GLX" firstAttribute="top" secondItem="MEb-2k-ytE" secondAttribute="bottom" constant="33" id="Vlc-b8-ZUd"/>
+                            <constraint firstItem="XJ5-Lj-GLX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wd5-PI-3iP"/>
                             <constraint firstItem="MEb-2k-ytE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cmK-se-Sgh"/>
                             <constraint firstItem="MEb-2k-ytE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="tzF-LI-tDi"/>
                         </constraints>
@@ -41,6 +53,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="P7P-He-gwW"/>
                     <connections>
+                        <outlet property="speedSlider" destination="XJ5-Lj-GLX" id="0Xv-Qd-UmZ"/>
                         <outlet property="theSegment" destination="MEb-2k-ytE" id="Z9v-v9-0NG"/>
                     </connections>
                 </viewController>

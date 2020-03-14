@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var counter = 0.0
     
     @IBOutlet weak var theSegment: UISegmentedControl!
+    @IBOutlet weak var speedSlider: UISlider!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,11 +40,11 @@ class ViewController: UIViewController {
         
         switch theSegment.selectedSegmentIndex {
         case 0:
-            counter += 4
+            counter += Double(speedSlider.value)
         case 1:
             break
         case 2:
-            counter -= 4
+            counter -= Double(speedSlider.value)
         default:
             break
         }
@@ -53,6 +54,9 @@ class ViewController: UIViewController {
 //        print(counter)
     }
 
+    @IBAction func speedChanged(_ sender: UISlider) {
+        print(sender.value)
+    }
     @IBAction func seledSegment(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
     }
