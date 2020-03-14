@@ -33,5 +33,8 @@ class ViewController: UIViewController {
         counter += 1
     }
     
+    @IBAction func stopCounter(_ sender: Any) {
+        timer.invalidate()
+    }
 }
 
